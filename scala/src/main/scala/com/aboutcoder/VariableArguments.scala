@@ -12,7 +12,8 @@ object VariableArguments {
   }
 
   def printStrings(a: Int, args: String*): Unit = {
-    var i: Int = 0;
+    var i: Int = 0
+
     for (arg <- args) {
       print("a" + a)
     }
