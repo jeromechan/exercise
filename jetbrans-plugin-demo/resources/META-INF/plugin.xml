@@ -1,0 +1,56 @@
+<idea-plugin>
+    <id>com.your.company.unique.plugin.id</id>
+    <name>Plugin display name here</name>
+    <version>1.0</version>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group id="packease.snippet.MainMenu" text="_PE Snippet" description="PE Snippet Menu Group">
+            <add-to-group group-id="MainMenu" anchor="first"/>
+            <action id="displayJCMenu01" class="com.aboutcoder.packease.snippet.action.MainMenuAction"
+                    text="_Menu 01" description="display JC Menu 01 and print text."/>
+            <action id="displayJCMenu02" class="com.aboutcoder.packease.snippet.action.MainMenuAction"
+                    text="_Menu 02" description="display JC Menu 02 and print text."/>
+        </group>
+
+        <!--<group id="packease.snippet.EditorPopupMenu" text="_PE Snippet Group" description="PE Snippet EditorPopupMenu Group">-->
+            <!--<add-to-group group-id="EditorPopupMenu" anchor="first"/>-->
+            <!--<action id="displayJCMenu01" class="com.aboutcoder.packease.snippet.action.MainMenuAction"-->
+                    <!--text="_Menu 01" description="display JC Menu 01 and print text."/>-->
+            <!--<action id="displayJCMenu02" class="com.aboutcoder.packease.snippet.action.MainMenuAction"-->
+                    <!--text="_Menu 02" description="display JC Menu 02 and print text."/>-->
+        <!--</group>-->
+
+        <action id="com.aboutcoder.packease.snippet.action.EditorPopupMenuAction"
+                class="com.aboutcoder.packease.snippet.action.EditorPopupMenuAction"
+                text="_PE Snippet" description="PE Snippet EditorPopupMenu">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>
